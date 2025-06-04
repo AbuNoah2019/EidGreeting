@@ -8,39 +8,81 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+            padding: 10px;
         }
+    
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+    
         .image-gallery img {
-            width: 100px;
-            height: 100px;
-            margin: 5px;
+            width: 30vw;
+            max-width: 100px;
+            height: auto;
             cursor: pointer;
             border: 2px solid gray;
+            border-radius: 8px;
         }
+    
         .selected {
             border-color: blue;
         }
+    
         .canvas-container {
-            position: relative;
-            display: inline-block;
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 400px;
         }
+    
         canvas {
+            width: 100%;
+            height: auto;
             border: 1px solid black;
         }
+    
         button {
+            margin-top: 20px;
             background-color: darkgreen;
             color: white;
             font-size: 18px;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
         }
-        footer {
-            margin-top: 20px;
-            font-size: 14px;
-            color: gray;
+    
+        /* Responsive text input */
+        input[type="text"] {
+            width: 80%;
+            max-width: 300px;
+            font-size: 18px;
+            padding: 8px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    
+        /* Optional: Add media query for very small screens */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+    
+            canvas {
+                max-width: 100%;
+            }
+    
+            button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
         }
     </style>
+    
 </head>
 <body>
     <h1>معايدة</h1>
